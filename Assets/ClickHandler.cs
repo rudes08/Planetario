@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class ClickHandler : MonoBehaviour
 {
     public Camera mainCamera;
-    public Transform targetPlanet;
     public float transitionSpeed = 2.0f;
     private bool isTransitioning = false;
+    private Transform targetPlanet;
     public Text planetInfoText; // Asegúrate de que esta variable esté declarada
 
     void Start()
@@ -24,15 +24,17 @@ public class ClickHandler : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform == targetPlanet)
+                PlanetInfo planetInfo = hit.transform.GetComponent<PlanetInfo>();
+                if (planetInfo != null)
                 {
                     Debug.Log("Planeta clickeado: " + hit.transform.name);
+                    targetPlanet = hit.transform;
                     isTransitioning = true;
                 }
             }
         }
 
-        if (isTransitioning)
+        if (isTransitioning && targetPlanet != null)
         {
             Vector3 targetPosition = targetPlanet.position + new Vector3(0, 0, -2);
             mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPosition, Time.deltaTime * transitionSpeed);
@@ -45,19 +47,20 @@ public class ClickHandler : MonoBehaviour
                 // Detener la rotación del planeta
                 targetPlanet.GetComponent<Orbita>().enabled = false;
                 // Mostrar información
-                ShowPlanetInfo();
+                ShowPlanetInfo(targetPlanet.GetComponent<PlanetInfo>());
             }
         }
     }
 
-    void ShowPlanetInfo()
+    void ShowPlanetInfo(PlanetInfo planetInfo)
     {
         // Actualizar el texto con la información del planeta
-        Debug.Log("Mostrando información de Mercurio");
-        planetInfoText.text = "Mercurio: El planeta más cercano al sol.";
+        Debug.Log("Mostrando información de " + planetInfo.planetName);
+        planetInfoText.text = planetInfo.planetName + ": " + planetInfo.planetDescription;
         planetInfoText.gameObject.SetActive(true);
     }
 }
+
 
 
 
