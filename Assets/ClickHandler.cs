@@ -17,29 +17,29 @@ public class ClickHandler : MonoBehaviour
 
     void Update()
     {
-       if (Input.GetMouseButtonDown(0))
-{
-    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-    RaycastHit hit;
-
-    if (Physics.Raycast(ray, out hit))
-    {
-        if (hit.transform == targetPlanet)
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Planeta clickeado: " + hit.transform.name);
-            isTransitioning = true;
-        }
-    }
-}
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform == targetPlanet)
+                {
+                    Debug.Log("Planeta clickeado: " + hit.transform.name);
+                    isTransitioning = true;
+                }
+            }
+        }
 
         if (isTransitioning)
         {
             mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPlanet.position + new Vector3(0, 0, -10), Time.deltaTime * transitionSpeed);
             mainCamera.transform.LookAt(targetPlanet);
 
-            if (Vector3.Distance(mainCamera.transform.position, targetPlanet.position + new Vector3(0, 0, -15)) < 0.1f)
+            if (Vector3.Distance(mainCamera.transform.position, targetPlanet.position + new Vector3(0, 0, -10)) < 0.1f)
             {
+                Debug.Log("Transición completada.");
                 isTransitioning = false;
                 // Detener la rotación del planeta
                 targetPlanet.GetComponent<Orbita>().enabled = false;
@@ -57,5 +57,6 @@ public class ClickHandler : MonoBehaviour
         planetInfoText.gameObject.SetActive(true);
     }
 }
+
 
 
