@@ -34,10 +34,11 @@ public class ClickHandler : MonoBehaviour
 
         if (isTransitioning)
         {
-            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPlanet.position + new Vector3(0, 0, -10), Time.deltaTime * transitionSpeed);
+            Vector3 targetPosition = targetPlanet.position + new Vector3(0, 0, -2);
+            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPosition, Time.deltaTime * transitionSpeed);
             mainCamera.transform.LookAt(targetPlanet);
 
-            if (Vector3.Distance(mainCamera.transform.position, targetPlanet.position + new Vector3(0, 0, -10)) < 0.1f)
+            if (Vector3.Distance(mainCamera.transform.position, targetPosition) < 0.8f)
             {
                 Debug.Log("Transición completada.");
                 isTransitioning = false;
@@ -57,6 +58,7 @@ public class ClickHandler : MonoBehaviour
         planetInfoText.gameObject.SetActive(true);
     }
 }
+
 
 
 
