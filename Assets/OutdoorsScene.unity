@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centroOrbita: {fileID: 237846641}
-  velocidadOrbita: 0.682
-  velocidadRotacion: 0.682
+  velocidadOrbita: 6.82
+  velocidadRotacion: 6.82
   inclinacion: {x: 0, y: 0, z: 0}
 --- !u!135 &27840732
 SphereCollider:
@@ -288,8 +288,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 130000
+  m_Color: {r: 0.89433956, g: 0.89433956, b: 0.89433956, a: 1}
+  m_Intensity: 4557.3945
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -332,9 +332,9 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6500
+  m_ColorTemperature: 20000
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 130000
+  m_Intensity: 4557.3945
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -510,8 +510,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centroOrbita: {fileID: 237846641}
-  velocidadOrbita: 1.307
-  velocidadRotacion: 1.26
+  velocidadOrbita: 13.07
+  velocidadRotacion: 12.6
   inclinacion: {x: 0, y: 0, z: 0}
 --- !u!135 &162360915
 SphereCollider:
@@ -767,8 +767,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centroOrbita: {fileID: 237846641}
-  velocidadOrbita: 3.502
-  velocidadRotacion: 0.652
+  velocidadOrbita: 35.02
+  velocidadRotacion: 6.52
   inclinacion: {x: 0, y: 0, z: 0}
 --- !u!135 &423339943
 SphereCollider:
@@ -1039,8 +1039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centroOrbita: {fileID: 237846641}
-  velocidadOrbita: 4.787
-  velocidadRotacion: 1.083
+  velocidadOrbita: 47.87
+  velocidadRotacion: 10.83
   inclinacion: {x: 0, y: 0, z: 0}
 --- !u!114 &494938168
 MonoBehaviour:
@@ -1370,8 +1370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centroOrbita: {fileID: 237846641}
-  velocidadOrbita: 2.4
-  velocidadRotacion: 2.4
+  velocidadOrbita: 24
+  velocidadRotacion: 24
   inclinacion: {x: 0, y: 0, z: 0}
 --- !u!135 &913822513
 SphereCollider:
@@ -1538,8 +1538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centroOrbita: {fileID: 237846641}
-  velocidadOrbita: 0.474
-  velocidadRotacion: 0.474
+  velocidadOrbita: 4.74
+  velocidadRotacion: 4.74
   inclinacion: {x: 0, y: 0, z: 0}
 --- !u!135 &1291125232
 SphereCollider:
@@ -1913,8 +1913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centroOrbita: {fileID: 237846641}
-  velocidadOrbita: 0.969
-  velocidadRotacion: 0.969
+  velocidadOrbita: 9.69
+  velocidadRotacion: 9.69
   inclinacion: {x: 0, y: 0, z: 0}
 --- !u!135 &1840507002
 SphereCollider:
@@ -1999,7 +1999,8 @@ Transform:
   m_LocalPosition: {x: -23.83, y: 0, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2105002703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1840507006
@@ -2050,8 +2051,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centroOrbita: {fileID: 237846641}
-  velocidadOrbita: 2.978
-  velocidadRotacion: 16.7
+  velocidadOrbita: 29.78
+  velocidadRotacion: 167
   inclinacion: {x: 0, y: 0, z: 0}
 --- !u!135 &1897855805
 SphereCollider:
@@ -2187,8 +2188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centroOrbita: {fileID: 237846641}
-  velocidadOrbita: 0.543
-  velocidadRotacion: 0.543
+  velocidadOrbita: 5.43
+  velocidadRotacion: 5.43
   inclinacion: {x: 0, y: 0, z: 0}
 --- !u!135 &1906956676
 SphereCollider:
@@ -2338,6 +2339,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2105002702
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1840507005}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_Name
+      value: Ring
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a635ff02bac17b244a8935447cff46eb, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8aa4a8814028a42fea37772e41f89781, type: 3}
+--- !u!4 &2105002703 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 8aa4a8814028a42fea37772e41f89781,
+    type: 3}
+  m_PrefabInstance: {fileID: 2105002702}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -61,7 +61,7 @@ public class ClickHandler : MonoBehaviour
                 mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPosition, Time.deltaTime * transitionSpeed);
                 mainCamera.transform.LookAt(targetPlanet);
 
-                if (Vector3.Distance(mainCamera.transform.position, targetPosition) < 4f)
+                if (Vector3.Distance(mainCamera.transform.position, targetPosition) < 3f)
                 {
                     Debug.Log("Transición completada.");
                     isTransitioning = false;
