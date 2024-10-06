@@ -8,6 +8,7 @@ public class PlanetMenu : MonoBehaviour
     public Text generalDataText;
     public Text moonsText;
     public Text measurementsText;
+    public Button backButton; // Botón de regresar
     private PlanetInfo currentPlanetInfo;
 
     void Start()
@@ -18,6 +19,10 @@ public class PlanetMenu : MonoBehaviour
         generalDataText.gameObject.SetActive(false);
         moonsText.gameObject.SetActive(false);
         measurementsText.gameObject.SetActive(false);
+
+        // Asegurarse de que el botón de regresar siempre esté visible
+        backButton.gameObject.SetActive(true);
+        backButton.onClick.AddListener(BackToGeneralView);
     }
 
     public void ShowMenu(PlanetInfo planetInfo)
@@ -40,7 +45,7 @@ public class PlanetMenu : MonoBehaviour
         planetInfoText.gameObject.SetActive(false);
         moonsText.gameObject.SetActive(false);
         measurementsText.gameObject.SetActive(false);
-        generalDataText.text = currentPlanetInfo.generalData;
+        generalDataText.text = FormatText(currentPlanetInfo.generalData);
         generalDataText.gameObject.SetActive(true);
     }
 
@@ -49,7 +54,7 @@ public class PlanetMenu : MonoBehaviour
         planetInfoText.gameObject.SetActive(false);
         generalDataText.gameObject.SetActive(false);
         measurementsText.gameObject.SetActive(false);
-        moonsText.text = currentPlanetInfo.moons;
+        moonsText.text = FormatText(currentPlanetInfo.moons);
         moonsText.gameObject.SetActive(true);
     }
 
@@ -58,10 +63,40 @@ public class PlanetMenu : MonoBehaviour
         planetInfoText.gameObject.SetActive(false);
         generalDataText.gameObject.SetActive(false);
         moonsText.gameObject.SetActive(false);
-        measurementsText.text = currentPlanetInfo.measurements;
+        measurementsText.text = FormatText(currentPlanetInfo.measurements);
         measurementsText.gameObject.SetActive(true);
     }
+
+    private void BackToGeneralView()
+    {
+        // Lógica para regresar a la vista general
+        ClickHandler clickHandler = Camera.main.GetComponent<ClickHandler>();
+        if (clickHandler != null)
+        {
+            clickHandler.HandlePlanetClick(null);
+        }
+    }
+
+    private string FormatText(string text)
+    {
+        // Reemplazar '|' con saltos de línea
+        text = text.Replace("|", "\n");
+        return text;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -27,30 +27,12 @@ public class ClickHandler : MonoBehaviour
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-
             if (Physics.Raycast(ray, out hit))
             {
                 PlanetInfo planetInfo = hit.transform.GetComponent<PlanetInfo>();
                 if (planetInfo != null)
                 {
-                    if (targetPlanet == hit.transform)
-                    {
-                        // Si el planeta ya está seleccionado, volver a la vista general
-                        Debug.Log("Volviendo a la vista general");
-                        isTransitioning = true;
-                        targetPlanet = null;
-                        planetInfoText.gameObject.SetActive(false);
-                        planetMenu.HideMenu();
-                    }
-                    else
-                    {
-                        // Seleccionar un nuevo planeta
-                        Debug.Log("Planeta clickeado: " + hit.transform.name);
-                        targetPlanet = hit.transform;
-                        isTransitioning = true;
-                        planetInfoText.gameObject.SetActive(false);
-                        planetMenu.HideMenu();
-                    }
+                    HandlePlanetClick(hit.transform);
                 }
             }
         }
@@ -69,7 +51,7 @@ public class ClickHandler : MonoBehaviour
                     Debug.Log("Transición completada.");
                     isTransitioning = false;
                     // Detener la rotación del planeta alrededor del sol
-                    targetPlanet.GetComponent<Orbita>().enabled = false;
+                    targetPlanet.GetComponent<Orbita>().enabled = true;
                     // Mostrar el menú
                     planetMenu.ShowMenu(targetPlanet.GetComponent<PlanetInfo>());
                 }
@@ -94,31 +76,42 @@ public class ClickHandler : MonoBehaviour
         }
     }
 
-    public void HandleOrbitClick(Transform planetTransform)
+    public void HandlePlanetClick(Transform planetTransform)
     {
-        if (targetPlanet == planetTransform)
+        if (planetTransform == null || targetPlanet == planetTransform)
         {
-            // Si el planeta ya está seleccionado, volver a la vista general
+            // Si el planeta ya está seleccionado o se hace clic en el botón de regresar, volver a la vista general
             Debug.Log("Volviendo a la vista general");
             isTransitioning = true;
             targetPlanet = null;
             planetInfoText.gameObject.SetActive(false);
             planetMenu.HideMenu();
+            if (planetTransform != null)
+            {
+                planetTransform.GetComponent<Orbita>().enabled = true;
+            }
         }
         else
         {
             // Seleccionar un nuevo planeta
             Debug.Log("Planeta clickeado: " + planetTransform.name);
+            if (targetPlanet != null)
+            {
+                targetPlanet.GetComponent<Orbita>().enabled = true;
+            }
             targetPlanet = planetTransform;
             isTransitioning = true;
             planetInfoText.gameObject.SetActive(false);
             planetMenu.HideMenu();
+            planetTransform.GetComponent<Orbita>().enabled = false;
         }
     }
-
-
-
 }
+
+
+
+
+
 
 
 

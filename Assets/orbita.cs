@@ -6,11 +6,13 @@ public class Orbita : MonoBehaviour
     public float velocidadOrbita; // Velocidad de la órbita
     public float velocidadRotacion; // Velocidad de rotación sobre su propio eje
     public Vector3 inclinacion; // Inclinación del planeta
+    private OrbitPath orbitPath;
 
     void Start()
     {
         // Aplicar la inclinación inicial
         transform.rotation = Quaternion.Euler(inclinacion);
+        orbitPath = GetComponent<OrbitPath>();
     }
 
     void Update()
@@ -24,5 +26,26 @@ public class Orbita : MonoBehaviour
             transform.RotateAround(centroOrbita.position, Vector3.up, velocidadOrbita * Time.deltaTime);
         }
     }
+
+    void OnMouseEnter()
+    {
+        if (orbitPath != null)
+        {
+            orbitPath.HighlightOrbit(true);
+        }
+    }
+
+    void OnMouseExit()
+    {
+        if (orbitPath != null)
+        {
+            orbitPath.HighlightOrbit(false);
+        }
+    }
 }
+
+
+
+
+
 

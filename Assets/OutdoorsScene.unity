@@ -192,7 +192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lunas
+  m_Text: satellites
 --- !u!222 &7402989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 27840732}
   - component: {fileID: 27840731}
   - component: {fileID: 27840736}
+  - component: {fileID: 27840737}
   m_Layer: 0
   m_Name: Urano
   m_TagString: Untagged
@@ -319,8 +320,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -47.83, y: 0, z: 0.18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -337,10 +338,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Urano
-  planetDescription: El planeta
-  generalData: 
-  moons: 
-  measurements: 
+  planetDescription: 
+  generalData: "Uranus| \u2022 Color: Pale blue| \u2022 Material: Ices, rock| \u2022
+    Discovery Year: 1781 by William Herschel| \u2022 Composition: Hydrogen, helium,
+    water, ammonia, methane| \u2022 Planet Type: Ice giant| \u2022 Name Origin: Greek
+    god Uranus, sky| \u2022 Atmosphere: Hydrogen (H\u2082) (~82.5%), helium (He)
+    (~15.2%),| and methane (CH\u2084) (~2.3%).| \u2022 Human Life: Extreme cold,
+    no solid surface| \u2022 Tilted World: Uranus rolls on its side, with an axial
+    tilt of 98 degrees,| making its rotation appear more like it\u2019s rolling around
+    the Sun.| \u2022 Icy Giant: Uranus is often called an \u201Cice giant\u201D because
+    it has more ices,| such as water, ammonia, and methane, compared to Jupiter and
+    Saturn."
+  moons: Uranus| Miranda| Ariel| Umbriel| Titania| Oberon| Puck| Portia
+  measurements: "Uranus| \u2022 Distance to the Sun: 2.87 billion km| \u2022 Distance
+    from Earth: 2.6 billion km at closest approach| \u2022 Rotation Speed: 6.81 km/s
+    (orbital speed), 17.2 hours (retrograde rotation)| \u2022 Translation Speed:
+    6.81 km/s (orbital velocity)| \u2022 Mass: 86.8 x 10^24 kg (14.5 times Earth's)|
+    \u2022 Year Duration: 84 Earth years| \u2022 Day Duration: 17.2 hours| \u2022
+    Gravity: 8.69 m/s\xB2 (89% of Earth's)| \u2022 Radius: 25,362 km| \u2022 Diameter:
+    50,724 km| \u2022 Inclination: 0.77\xB0 to the ecliptic| \u2022 Temperature:
+    -195\xB0C (cloud tops"
+--- !u!114 &27840737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27840730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eab0edf64b3a64d92fe9d00adbbb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lineWidth: 0.07
 --- !u!1 &157207112
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,13 +461,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157207112}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5212148, y: -0.40750492, z: -0.07237755, w: 0.74634874}
-  m_LocalPosition: {x: 0.13, y: -1.7, z: -5.34}
+  m_LocalRotation: {x: 0.5802634, y: -0.4094374, z: -0.15095867, w: 0.68765324}
+  m_LocalPosition: {x: 1.02, y: 0.58, z: -1.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 45.974, y: -79.676, z: -50.057}
+  m_LocalEulerAnglesHint: {x: 42.409, y: -90.674, z: -67.629}
 --- !u!114 &157207115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +604,7 @@ GameObject:
   - component: {fileID: 162360915}
   - component: {fileID: 162360914}
   - component: {fileID: 162360919}
+  - component: {fileID: 162360920}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -676,7 +709,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.975, y: 0, z: 0.18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.02, y: 1.02, z: 1.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -694,10 +727,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Jupiter
-  planetDescription: El planeta
-  generalData: 
-  moons: 
-  measurements: 
+  planetDescription: 
+  generalData: "Jupiter| \u2022 Colour: White, orange, brown, red| \u2022 Material:
+    Gas and liquid| \u2022 Discovery Year: Known since ancient times| \u2022 Composition:
+    Hydrogen, helium| \u2022 Atmosphere: Predominantly hydrogen (H\u2082) (~89.8%)
+    and helium (He) (~10.2%),| with traces of methane (CH\u2084), ammonia (NH\u2083),
+    hydrogen sulphide (H\u2082S), and water (H\u2082O).| \u2022 Human Life: No solid
+    surface; intense radiation| \u2022 Biggest in the Neighbourhood: Jupiter is so
+    massive that it could fit all the other| planets inside it with room to spare.|
+    \u2022 Great Red Spot: This enormous storm, larger than Earth itself,| has been
+    raging for at least 400 years and maybe even much longer."
+  moons: Jupiter| Io| Europa| Ganymede| Callisto| Amalthea| Himalia| Elara| Pasiphae|
+    Sinope| Lysithea| Carme| Ananke| Leda| Thebe| Harpalyke
+  measurements: "Jupiter| \u2022 Distance to the Sun: 778.5 million km| \u2022 Distance
+    from Earth: 628 million km at closest approach| \u2022 Rotation Speed: 12.6 km/s
+    (orbital speed), 9.9 hours| \u2022 Translation Speed: 13.07 km/s (orbital velocity)|
+    \u2022 Mass: 1,898 x 10^24 kg (318 times Earth's)| \u2022 Year Duration: 11.86
+    Earth years| \u2022 Day Duration: 9.9 hours| \u2022 Gravity: 24.79 m/s\xB2 (2.5
+    times Earth's)| \u2022 Radius: 69,911 km| \u2022 Diameter: 139,820 km| \u2022
+    Inclination: 1.31\xB0 to the ecliptic| \u2022 Temperature: -108\xB0C (cloud tops)"
+--- !u!114 &162360920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162360913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eab0edf64b3a64d92fe9d00adbbb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lineWidth: 0.03
 --- !u!1 &237846637
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,8 +862,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -817,7 +880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Sol
-  planetDescription: Es el sol
+  planetDescription: 
   generalData: 
   moons: 
   measurements: 
@@ -835,6 +898,7 @@ GameObject:
   - component: {fileID: 423339943}
   - component: {fileID: 423339942}
   - component: {fileID: 423339947}
+  - component: {fileID: 423339948}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -939,8 +1003,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.82, y: 0, z: 0.18}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.435, y: 0.435, z: 0.435}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -958,9 +1022,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetName: Venus
   planetDescription: El planeta
-  generalData: 
-  moons: 
-  measurements: 
+  generalData: "Material: Rock, metal| \u2022 Discovery Year: Known since ancient
+    times| \u2022 Composition: Iron core, silicate mantle, thick CO2 atmosphere|
+    \u2022 Planet Type: Terrestrial| \u2022 Name Origin: Roman goddess Venus, love
+    and beauty|\u2022Atmosphere: Thick atmosphere primarily of carbon dioxide (CO\u2082)
+    (~96.5%)| and nitrogen (N\u2082) (~3.5%), with traces of sulphur dioxide (SO\u2082)
+    and other gases.| \u2022 Human Life: Extreme temperatures and pressure, toxic
+    atmosphere\u2014no go for humans| \u2022 Opposite Day: Venus rotates backwards
+    compared to most planets, meaning if you were on Venus, the Sun would rise in
+    the west and set in the east.| \u2022 Scorching Hot: Venus has the hottest surface
+    temperature of any planet in our solar system,| reaching up to 475\xB0C due to
+    its thick, greenhouse gas-laden atmosphere."
+  moons: It does not have satellites
+  measurements: "\u2022 Distance to the Sun: 108.2 million km| \u2022 Distance from
+    Earth: 38 million km at closest approach| \u2022 Rotation Speed: 6.52 km/s (orbital
+    speed), 243 Earth days (retrograde rotation)| \u2022 Translation Speed: 35.02
+    km/s (orbital velocity)| \u2022 Mass: 4.87 x 10^24 kg (82% of Earth's)| \u2022
+    Year Duration: 225 Earth days| \u2022 Day Duration: 243 Earth days| \u2022 Gravity:
+    8.87 m/s\xB2 (90% of Earth's)| Radius: 6,051.8 km| \u2022 Diameter: 12,104 km|
+    \u2022 Inclination: 3.39\xB0 to the ecliptic| \u2022 Temperature: 464\xB0C"
+--- !u!114 &423339948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423339941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eab0edf64b3a64d92fe9d00adbbb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lineWidth: 0.03
 --- !u!1 &432432459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +1136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1052,16 +1147,16 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &460448691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1086,7 +1181,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371.74994, y: -282.25}
+  m_AnchoredPosition: {x: 90, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &494938162
@@ -1103,6 +1198,7 @@ GameObject:
   - component: {fileID: 494938163}
   - component: {fileID: 494938167}
   - component: {fileID: 494938168}
+  - component: {fileID: 494938169}
   m_Layer: 0
   m_Name: Mercurio
   m_TagString: Untagged
@@ -1191,7 +1287,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.965, y: 0, z: 0.18}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1224,11 +1320,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6542da3fbf8a12b4898f157e105859ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetName: Mercurio
-  planetDescription: Es planeta
-  generalData: 
-  moons: 
-  measurements: 
+  planetName: Mercury
+  planetDescription: 
+  generalData: "Atmosphere: Very thin atmosphere (exosphere) composed mainly of oxygen
+    (O\u2082),| sodium (Na), hydrogen (H\u2082), helium (He), and potassium (K).
+    |\u2022 Human Life: Harsh environment, no atmosphere to speak of\u2014survival
+    unlikely without extreme measures |\u2022 Swift Spin: Despite being the smallest
+    planet, Mercury has the fastest orbital speed, zooming around the Sun at nearly
+    47.87 km/s. | \u2022 Extreme Temperatures: Mercury experiences the largest temperature
+    variation in the solar system, from -173\xB0C at night to 427\xB0C during the
+    day."
+  moons: It does not have satellites.
+  measurements: "Distance to the Sun: 57.91 million km| \u2022 Distance from Earth:
+    77 million km at closest approach| \u2022 Rotation Speed: 10.83 km/s (orbital
+    speed), 59 Earth days| \u2022 Translation Speed: 47.87 km/s (orbital velocity)|
+    \u2022 Mass: 0.33 x 10^24 kg (5.5% of Earth's)| \u2022 Year Duration: 88 Earth
+    days| \u2022 Day Duration: 176 Earth days| \u2022 Gravity: 3.7 m/s\xB2 (38% of
+    Earth's)Radius: 2,439.7 km| \u2022 Diameter: 4,879 km| \u2022 Inclination: 7\xB0
+    to the ecliptic| \u2022 Temperature: -173\xB0C to 427\xB0C "
+--- !u!114 &494938169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494938162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eab0edf64b3a64d92fe9d00adbbb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  color: {r: 0.93962264, g: 0.93962264, b: 0.93962264, a: 1}
+  lineWidth: 0.03
 --- !u!1 &498155382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1492,7 @@ MonoBehaviour:
   generalDataText: {fileID: 2139734719}
   moonsText: {fileID: 935740758}
   measurementsText: {fileID: 460448690}
+  backButton: {fileID: 1706758396}
 --- !u!114 &585447867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1504,7 +1629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1533,6 +1658,365 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635686138}
   m_CullTransparentMesh: 1
+--- !u!1001 &660065918
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7783329880357277044, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76a465c9263b67043bf698a86217e2db, type: 2}
+    - target: {fileID: -6035545099058494052, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -6035545099058494052, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -6035545099058494052, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -6035545099058494052, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: -6035545099058494052, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.088
+      objectReference: {fileID: 0}
+    - target: {fileID: -6035545099058494052, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.862
+      objectReference: {fileID: 0}
+    - target: {fileID: -6035545099058494052, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849255552581191694, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.029999997
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849255552581191694, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.029999997
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849255552581191694, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.029999997
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849255552581191694, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.418
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849255552581191694, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.28
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1079544729524598002, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76a465c9263b67043bf698a86217e2db, type: 2}
+    - target: {fileID: -927199367670048503, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_Name
+      value: Asteroids
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682098391876632908, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76a465c9263b67043bf698a86217e2db, type: 2}
+    - target: {fileID: 4903039295325020896, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.029999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903039295325020896, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.029999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903039295325020896, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.029999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903039295325020896, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.102
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903039295325020896, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.124
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903039295325020896, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729223603287599527, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76a465c9263b67043bf698a86217e2db, type: 2}
+    - target: {fileID: 7441479856252608333, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.029999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441479856252608333, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.029999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441479856252608333, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.029999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441479856252608333, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441479856252608333, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441479856252608333, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441479856252608333, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 61cb025e834864d63b72bee13fbbb2a9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1042622865}
+  m_SourcePrefab: {fileID: 100100000, guid: 61cb025e834864d63b72bee13fbbb2a9, type: 3}
+--- !u!1 &743959120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 743959125}
+  - component: {fileID: 743959124}
+  - component: {fileID: 743959123}
+  - component: {fileID: 743959122}
+  - component: {fileID: 743959121}
+  m_Layer: 0
+  m_Name: Moon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &743959121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743959120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691bfd60991d1ad40a8c269f9ca046c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  velocidadOrbita: 29.78
+  velocidadRotacion: 167
+  inclinacion: {x: 0, y: 0, z: 0}
+--- !u!135 &743959122
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743959120}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &743959123
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743959120}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d5d04ff69e1b7604297fb61fa3357dac, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &743959124
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743959120}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &743959125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743959120}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.9, y: 0.1, z: 0.24298179}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &744800170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +2130,7 @@ GameObject:
   - component: {fileID: 913822513}
   - component: {fileID: 913822512}
   - component: {fileID: 913822517}
+  - component: {fileID: 913822518}
   m_Layer: 0
   m_Name: Marte
   m_TagString: Untagged
@@ -1750,7 +2235,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.79, y: 0, z: 0.18}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.24, y: 0.24, z: 0.24}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1768,10 +2253,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Marte
-  planetDescription: El planeta
-  generalData: 
-  moons: 
-  measurements: 
+  planetDescription: 
+  generalData: "Mars| Colour: Red| \u2022 Material: Rock, metal| \u2022 Discovery
+    Year: Known since ancient times| \u2022 Composition: Iron oxide, silicate rock|
+    \u2022 Name Origin: Roman god Mars, war| \u2022Atmosphere: Mostly carbon dioxide
+    (CO\u2082) (~95.3%), nitrogen (N\u2082) (~2.7%), |argon (AR) (~1.6%), with traces
+    of oxygen (O\u2082), carbon monoxide (CO), and water vapor (H\u2082O).|\u2022
+    Human Life: Hostile but potential for colonization with technology| \u2022 Solar
+    Panels Required: Mars has dust storms so massive that they can engulf the entire
+    planet and last for months.| \u2022 Water Ice: The poles of Mars have ice caps
+    made of water| and carbon dioxide that shrink and grow with the seasons."
+  moons: "Mars| \u2022 Phobos| \u2022Deimos"
+  measurements: "Mars| \u2022 Distance to the Sun: 227.9 million km| \u2022 Distance
+    from Earth: 78 million km at closest approach| \u2022 Rotation Speed: 24.077
+    km/s (orbital speed), 1.03 Earth days| \u2022 Translation Speed: 24.077 km/s
+    (orbital speed)| \u2022 Mass: 0.642 x 10^24 kg (11% of Earth's)| \u2022 Year
+    Duration: 687 Earth days| \u2022 Day Duration: 24.6 hours| \u2022 Gravity: 3.71
+    m/s\xB2 (37% of Earth's)| \u2022 Radius: 3,389.5 km| \u2022 Diameter: 6,779 km|
+    \u2022 Inclination: 1.85\xB0 to the ecliptic| \u2022 Temperature: -63\xB0C"
+--- !u!114 &913822518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913822511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eab0edf64b3a64d92fe9d00adbbb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lineWidth: 0.03
 --- !u!1 &935740757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,7 +2317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1814,14 +2328,14 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &935740759
@@ -1984,6 +2498,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039210974}
   m_CullTransparentMesh: 1
+--- !u!1 &1042622863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 61cb025e834864d63b72bee13fbbb2a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 660065918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1042622865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042622863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691bfd60991d1ad40a8c269f9ca046c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  velocidadOrbita: 29.78
+  velocidadRotacion: 0
+  inclinacion: {x: 0, y: 0, z: 0}
 --- !u!1 &1201739708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,6 +2565,7 @@ GameObject:
   - component: {fileID: 1291125232}
   - component: {fileID: 1291125231}
   - component: {fileID: 1291125236}
+  - component: {fileID: 1291125237}
   m_Layer: 0
   m_Name: Pluton
   m_TagString: Untagged
@@ -2133,7 +2670,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -78.66, y: 0, z: 0.18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.17, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2151,10 +2688,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Pluton
-  planetDescription: El planeta
-  generalData: 
-  moons: 
-  measurements: 
+  planetDescription: 
+  generalData: "Pluto (Dwarf Planet)| \u2022 Colour: Brownish-yellow| \u2022 Material:
+    Rock, ice| \u2022 Discovery Year: 1930 by Clyde Tombaugh| \u2022 Composition:
+    Rock, water ice, methane ice| \u2022 Planet Type: Dwarf planet| \u2022 Name Origin:
+    Roman god Pluto, the underworld| \u2022 Atmosphere: Thin atmosphere primarily
+    of nitrogen (N\u2082) (>99%), with minor amounts of methane (CH\u2084) (~0.25%)|
+    and carbon monoxide (CO) (~0.05%).| \u2022 Human Life: Frigid temperatures and
+    thin atmosphere\u2014human survival isn't feasible without significant technology.|
+    \u2022 Did you know? In 2006, Pluto was demoted from its planetary status by
+    the Internat ional Astronomical Union (IAU).| This was because it couldn't \"clear
+    its neighborho od\" of other objects in its orbit.| Now, it's considered a dwarf
+    planet, sharing space w ith other icy bodies in the Kuiper Belt."
+  moons: 'Pluto (Dwarf Planet)| Charon| Nix, Hydra, Kerberos, Styx '
+  measurements: "Pluto (Dwarf Planet)| \u2022 Distance to the Sun: 5.9 billion km
+    \u2022 Distance from Earth: 4.28 billion km at closest approach \u2022 Rotation
+    Speed: 4.74 km/s (orbital speed), 6.39 Earth days| \u2022 Translation Speed:
+    4.74 km/s (orbital velocity)| \u2022 Mass: 0.013 x 10^24 kg (0.2% of Earth's)|
+    \u2022 Year Duration: 248 Earth years| \u2022 Day Duration: 6.39 Earth days|
+    \u2022 Gravity: 0.62 m/s\xB2 (6.7% of Earth's)| \u2022 Radius: 1,188.3 km| \u2022
+    Diameter: 2,376.6 km| \u2022 Inclination: 17.16\xB0 to the ecliptic| \u2022 Temperature:
+    -229\xB0C"
+--- !u!114 &1291125237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291125230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eab0edf64b3a64d92fe9d00adbbb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lineWidth: 0.07
 --- !u!1 &1419162305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,10 +2783,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2225,7 +2794,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Medidas
+  m_Text: Measurements
 --- !u!222 &1419162308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2304,7 +2873,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Datos generales
+  m_Text: 'Data
+
+'
 --- !u!222 &1552983070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2383,7 +2954,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Regresar
+  m_Text: Back
 --- !u!222 &1624378715
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2911,6 +3482,7 @@ GameObject:
   - component: {fileID: 1840507002}
   - component: {fileID: 1840507001}
   - component: {fileID: 1840507006}
+  - component: {fileID: 1840507007}
   m_Layer: 0
   m_Name: Saturno
   m_TagString: Untagged
@@ -3015,8 +3587,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -23.83, y: 0, z: 0.18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.85999995, y: 0.85999995, z: 0.85999995}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2105002703}
   m_Father: {fileID: 0}
@@ -3034,10 +3606,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Saturno
-  planetDescription: El planeta
-  generalData: 
-  moons: 
-  measurements: 
+  planetDescription: 
+  generalData: "Saturn| \u2022 Colour: Pale gold| \u2022 Material: Gas, liquid| \u2022
+    Discovery Year: Known since ancient times| \u2022 Composition: Hydrogen, helium|
+    \u2022 Planet Type: Gas giant| \u2022 Name Origin: Roman god Saturn, agriculture|
+    \u2022 Atmosphere: Mainly hydrogen (H\u2082) (~96.3%) and helium (He) (~3.2%),|
+    with traces of methane (CH\u2084), ammonia (NH\u2083), and other gases.| \u2022
+    Human Life: No solid surface; intense radiation| \u2022 Spectacular Rings: Saturn's
+    rings are made up of ice and rock,| with some pieces as small as dust and others
+    as large as mountains.| \u2022 Float on by: If you could find a big enough ocean,|
+    Saturn would float because it\u2019s less dense than water."
+  moons: Saturn| Titan| Rhea| Iapetus| Dione| Tethys| Enceladus| Mimas| Hyperion|
+    Phoebe| Janus| Epimetheus| Pandora| Prometheus| Atlas| Pan| Helene| Telesto|
+    Calypso
+  measurements: "Saturn| \u2022 Distance to the Sun: 1.43 billion km| \u2022 Distance
+    from Earth: 1.2 billion km at closest approach| \u2022 Rotation Speed: 9.69 km/s
+    (orbital speed), 10.7 hours| \u2022 Translation Speed: 9.69 km/s (orbital velocity)|
+    \u2022 Mass: 568 x 10^24 kg (95 times Earth's)| \u2022 Year Duration: 29.5 Earth
+    years| \u2022 Day Duration: 10.7 hours| \u2022 Gravity: 10.44 m/s\xB2 (1.065
+    times Earth's)| \u2022 Radius: 58,232 km| \u2022 Diameter: 116,460 km| \u2022
+    Inclination: 2.48\xB0 to the ecliptic| \u2022 Temperature: -139\xB0C (cloud tops)"
+--- !u!114 &1840507007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840507000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eab0edf64b3a64d92fe9d00adbbb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lineWidth: 0.07
 --- !u!1 &1891147368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,6 +3788,7 @@ GameObject:
   - component: {fileID: 1897855805}
   - component: {fileID: 1897855804}
   - component: {fileID: 1897855809}
+  - component: {fileID: 1897855810}
   m_Layer: 0
   m_Name: Tierra
   m_TagString: Untagged
@@ -3289,7 +3893,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.49, y: 0, z: 0.18}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.455, y: 0.455, z: 0.455}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -3307,10 +3911,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Tierra
-  planetDescription: El planeta
-  generalData: Es nuestro hogar
-  moons: Luna
-  measurements: 
+  planetDescription: 
+  generalData: "Earth| \u2022 Colour: Blue and green| \u2022 Material: Rock, water|
+    \u2022 Composition: Iron core, silicate mantle and crust, water, atmosphere of
+    nitrogen and oxygen| \u2022 Planet Type: Terrestrial| \u2022 Name Origin: Old
+    English, Germanic roots| \u2022 Atmosphere: Nitrogen (N\u2082) (~78%), oxygen
+    (O\u2082) (~21%),| argon (Ar) (~0.93%), carbon dioxide (CO\u2082) (~0.04%), and
+    trace amounts of other gases.| \u2022 Human Life: The Goldilocks Zone\u2014just
+    right!| \u2022 Dynamic Atmosphere: Earth's atmosphere is constantly changing,
+    with weather systems that can transform in hours and seasons that shift over
+    months.| \u2022 Life's Unique Footprint: Earth is the only known planet where
+    water exists in all three states\u2014solid,| liquid, and gas\u2014and sustains
+    complex life forms."
+  moons: Earth|Moon.
+  measurements: "Earth| \u2022 Distance to the Sun: 149.6 million km| \u2022 Translation
+    Speed: 29.78 km/s (orbital speed)| \u2022 Rotation Speed: 1670 km/h at the equator|
+    \u2022 Mass: 5.97 x 10^24 kg| \u2022 Year Duration: 365.25 days| \u2022 Day Duration:
+    24 hours| \u2022 Gravity: 9.8 m/s\xB2| Radius: 6,371 km| \u2022 Diameter: 12,742
+    km| \u2022 Inclination: 23.44\xB0 relative to its orbital plane| \u2022 Temperature:
+    14\xB0C (average global)"
+--- !u!114 &1897855810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897855803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eab0edf64b3a64d92fe9d00adbbb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lineWidth: 0.03
 --- !u!1 &1906956674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,6 +3959,7 @@ GameObject:
   - component: {fileID: 1906956676}
   - component: {fileID: 1906956675}
   - component: {fileID: 1906956680}
+  - component: {fileID: 1906956681}
   m_Layer: 0
   m_Name: Neptuno
   m_TagString: Untagged
@@ -3429,8 +4064,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -75, y: 0, z: 0.18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.54, y: 0.54, z: 0.54}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3447,10 +4082,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Neptuno
-  planetDescription: El planeta
-  generalData: 
-  moons: 
-  measurements: 
+  planetDescription: 
+  generalData: "Neptune| \u2022 Colour: Blue| \u2022 Material: Ices, rock| \u2022
+    Discovery Year: 1846 by Johann Galle| \u2022 Composition: Hydrogen, helium, water,
+    ammonia, methane| \u2022 Planet Type: Ice giant| \u2022 Name Origin: Roman god
+    Neptune, sea| \u2022 Atmosphere: Hydrogen (H\u2082) (~80%), helium (He) (~19%),|
+    and methane (CH\u2084) (~1%).| \u2022 Human Life: Extreme cold, no solid surface|
+    \u2022 Furthest Out: Neptune is the farthest planet from the Sun,| orbiting at
+    an average distance of 4.5 billion km.| \u2022 Windy Planet: Neptune has the
+    strongest winds in the solar system,| reaching speeds up to 2,100 km/h."
+  moons: Neptune| Triton| Proteus| Nereid| Larissa| Galatea| Despina
+  measurements: "Neptune| \u2022 Distance to the Sun: 4.5 billion km| \u2022 Distance
+    from Earth: 4.3 billion km at closest approach| \u2022 Rotation Speed: 5.43 km/s
+    (orbital speed), 16.1 hours| \u2022 Translation Speed: 5.43 km/s (orbital velocity)|
+    \u2022 Mass: 102 x 10^24 kg (17 times Earth's)| \u2022 Year Duration: 165 Earth
+    years| \u2022 Day Duration: 16.1 hours| \u2022 Gravity: 11.15 m/s\xB2 (114% of
+    Earth's)| \u2022 Radius: 24,622 km| \u2022 Diameter: 49,244 km| \u2022 Inclination:
+    1.77\xB0 to the ecliptic| \u2022 Temperature: -201\xB0C (cloud tops)"
+--- !u!114 &1906956681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906956674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eab0edf64b3a64d92fe9d00adbbb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centroOrbita: {fileID: 237846641}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lineWidth: 0.07
 --- !u!1 &1948910599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3482,7 +4145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.56078434}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3578,6 +4241,223 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2062150969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2062150972}
+  - component: {fileID: 2062150971}
+  - component: {fileID: 2062150970}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2062150970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062150969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Intensity: 3028.0576
+  m_EnableSpotReflector: 1
+  m_LuxAtDistance: 1
+  m_InnerSpotPercent: 0
+  m_SpotIESCutoffPercent: 100
+  m_LightDimmer: 1
+  m_VolumetricDimmer: 1
+  m_LightUnit: 2
+  m_FadeDistance: 10000
+  m_VolumetricFadeDistance: 10000
+  m_AffectDiffuse: 1
+  m_AffectSpecular: 1
+  m_NonLightmappedOnly: 0
+  m_ShapeWidth: 0.5
+  m_ShapeHeight: 0.5
+  m_AspectRatio: 1
+  m_ShapeRadius: 0.025
+  m_SoftnessScale: 1
+  m_UseCustomSpotLightShadowCone: 0
+  m_CustomSpotLightShadowCone: 30
+  m_MaxSmoothness: 0.99
+  m_ApplyRangeAttenuation: 1
+  m_DisplayAreaLightEmissiveMesh: 0
+  m_AreaLightCookie: {fileID: 0}
+  m_IESPoint: {fileID: 0}
+  m_IESSpot: {fileID: 0}
+  m_IncludeForRayTracing: 1
+  m_AreaLightShadowCone: 120
+  m_UseScreenSpaceShadows: 0
+  m_InteractsWithSky: 1
+  m_AngularDiameter: 0.5
+  m_FlareSize: 2
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
+  m_FlareFalloff: 4
+  m_SurfaceTexture: {fileID: 0}
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
+  m_Distance: 1.5e+11
+  m_UseRayTracedShadows: 0
+  m_NumRayTracingSamples: 4
+  m_FilterTracedShadow: 1
+  m_FilterSizeTraced: 16
+  m_SunLightConeAngle: 0.5
+  m_LightShadowRadius: 0.5
+  m_SemiTransparentShadow: 0
+  m_ColorShadow: 1
+  m_DistanceBasedFiltering: 0
+  m_EvsmExponent: 15
+  m_EvsmLightLeakBias: 0
+  m_EvsmVarianceBias: 0.00001
+  m_EvsmBlurPasses: 0
+  m_LightlayersMask: 1
+  m_LinkShadowLayers: 1
+  m_ShadowNearPlane: 0.1
+  m_BlockerSampleCount: 24
+  m_FilterSampleCount: 16
+  m_MinFilterSize: 0.1
+  m_KernelSize: 5
+  m_LightAngle: 1
+  m_MaxDepthBias: 0.001
+  m_ShadowResolution:
+    m_Override: 512
+    m_UseOverride: 1
+    m_Level: 0
+  m_ShadowDimmer: 1
+  m_VolumetricShadowDimmer: 1
+  m_ShadowFadeDistance: 10000
+  m_UseContactShadow:
+    m_Override: 0
+    m_UseOverride: 1
+    m_Level: 0
+  m_RayTracedContactShadow: 0
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
+  m_PenumbraTint: 0
+  m_NormalBias: 0.75
+  m_SlopeBias: 0.5
+  m_ShadowUpdateMode: 0
+  m_AlwaysDrawDynamicShadows: 0
+  m_UpdateShadowOnLightMovement: 0
+  m_CachedShadowTranslationThreshold: 0.01
+  m_CachedShadowAngularThreshold: 0.5
+  m_BarnDoorAngle: 90
+  m_BarnDoorLength: 0.05
+  m_preserveCachedShadow: 0
+  m_OnDemandShadowRenderOnPlacement: 1
+  m_ShadowCascadeRatios:
+  - 0.05
+  - 0.2
+  - 0.3
+  m_ShadowCascadeBorders:
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  m_ShadowAlgorithm: 0
+  m_ShadowVariant: 0
+  m_ShadowPrecision: 0
+  useOldInspector: 0
+  useVolumetric: 1
+  featuresFoldout: 1
+  m_AreaLightEmissiveMeshShadowCastingMode: 0
+  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
+  m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
+--- !u!108 &2062150971
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062150969}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3028.0576
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 2
+  m_AreaSize: {x: 0.5, y: 0.5}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 20000
+  m_UseColorTemperature: 1
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &2062150972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062150969}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0046761315, y: 0.12330197, z: 0.28220698, w: -0.9513853}
+  m_LocalPosition: {x: -0.44, y: 0, z: 0.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -3.48, y: 346.25, z: -32.624}
 --- !u!1001 &2105002702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3676,7 +4556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3687,14 +4567,14 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &2139734720
@@ -3719,10 +4599,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 585447870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: -50}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -268.5, y: -347}
+  m_SizeDelta: {x: -643, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -3747,3 +4627,6 @@ SceneRoots:
   - {fileID: 909431729}
   - {fileID: 498155386}
   - {fileID: 585447870}
+  - {fileID: 2062150972}
+  - {fileID: 743959125}
+  - {fileID: 660065918}

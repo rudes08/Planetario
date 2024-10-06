@@ -3,61 +3,58 @@ using UnityEngine;
 public class OrbitPath : MonoBehaviour
 {
     public Transform centroOrbita;
-    public int segments = 100;
-    public float radio;
     public Color color;
+    public float lineWidth = 0.03f; // Ajusta este valor para cambiar la anchura de la línea
     private LineRenderer lineRenderer;
+    private int segments = 1000; // Número de segmentos para la órbita
 
     void Start()
     {
         lineRenderer = gameObject.AddComponent<LineRenderer>();
-        lineRenderer.positionCount = segments + 1;
-        lineRenderer.useWorldSpace = false;
+        lineRenderer.useWorldSpace = true;
         lineRenderer.startColor = color;
         lineRenderer.endColor = color;
-        lineRenderer.startWidth = 0.1f;
-        lineRenderer.endWidth = 0.1f;
+        lineRenderer.startWidth = lineWidth;
+        lineRenderer.endWidth = lineWidth;
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        CreatePoints();
+
+        DrawOrbit();
     }
 
-    void CreatePoints()
+    void DrawOrbit()
     {
-        float x;
-        float z;
-        float angle = 20f;
+        lineRenderer.positionCount = segments + 1;
+        float angle = 0f;
+        float radius = Vector3.Distance(transform.position, centroOrbita.position);
 
-        for (int i = 0; i < (segments + 1); i++)
+        for (int i = 0; i <= segments; i++)
         {
-            x = Mathf.Sin(Mathf.Deg2Rad * angle) * radio;
-            z = Mathf.Cos(Mathf.Deg2Rad * angle) * radio;
-
-            lineRenderer.SetPosition(i, new Vector3(x, 0, z));
-
-            angle += (360f / segments);
+            float x = Mathf.Sin(Mathf.Deg2Rad * angle) * radius;
+            float z = Mathf.Cos(Mathf.Deg2Rad * angle) * radius;
+            lineRenderer.SetPosition(i, new Vector3(x, 0, z) + centroOrbita.position);
+            angle += 360f / segments;
         }
     }
 
-    void OnMouseEnter()
+    public void HighlightOrbit(bool highlight)
     {
-        lineRenderer.startColor = Color.yellow;
-        lineRenderer.endColor = Color.yellow;
-    }
-
-    void OnMouseExit()
-    {
-        lineRenderer.startColor = color;
-        lineRenderer.endColor = color;
-    }
-
-    void OnMouseDown()
-    {
-        // Lógica para manejar el clic en la órbita
-        ClickHandler clickHandler = Camera.main.GetComponent<ClickHandler>();
-        if (clickHandler != null)
+        if (highlight)
         {
-            clickHandler.HandleOrbitClick(transform.parent);
+            lineRenderer.startColor = Color.yellow;
+            lineRenderer.endColor = Color.yellow;
+        }
+        else
+        {
+            lineRenderer.startColor = color;
+            lineRenderer.endColor = color;
         }
     }
 }
+
+
+
+
+
+
+
 
