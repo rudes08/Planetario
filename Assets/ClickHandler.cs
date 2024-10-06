@@ -10,6 +10,7 @@ public class ClickHandler : MonoBehaviour
     private Vector3 initialCameraPosition;
     private Quaternion initialCameraRotation;
     public Text planetInfoText; // Asegúrate de que esta variable esté declarada
+    public PlanetMenu planetMenu; // Referencia al script PlanetMenu
 
     void Start()
     {
@@ -39,6 +40,7 @@ public class ClickHandler : MonoBehaviour
                         isTransitioning = true;
                         targetPlanet = null;
                         planetInfoText.gameObject.SetActive(false);
+                        planetMenu.HideMenu();
                     }
                     else
                     {
@@ -47,6 +49,7 @@ public class ClickHandler : MonoBehaviour
                         targetPlanet = hit.transform;
                         isTransitioning = true;
                         planetInfoText.gameObject.SetActive(false);
+                        planetMenu.HideMenu();
                     }
                 }
             }
@@ -57,18 +60,18 @@ public class ClickHandler : MonoBehaviour
             if (targetPlanet != null)
             {
                 // Transición hacia el planeta
-                Vector3 targetPosition = targetPlanet.position + new Vector3(0, 0, 2);
+                Vector3 targetPosition = targetPlanet.position + new Vector3(0, 0, -2);
                 mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPosition, Time.deltaTime * transitionSpeed);
                 mainCamera.transform.LookAt(targetPlanet);
 
-                if (Vector3.Distance(mainCamera.transform.position, targetPosition) < 3f)
+                if (Vector3.Distance(mainCamera.transform.position, targetPosition) < 4f)
                 {
                     Debug.Log("Transición completada.");
                     isTransitioning = false;
                     // Detener la rotación del planeta alrededor del sol
                     targetPlanet.GetComponent<Orbita>().enabled = false;
-                    // Mostrar información
-                    ShowPlanetInfo(targetPlanet.GetComponent<PlanetInfo>());
+                    // Mostrar el menú
+                    planetMenu.ShowMenu(targetPlanet.GetComponent<PlanetInfo>());
                 }
             }
             else
@@ -77,7 +80,7 @@ public class ClickHandler : MonoBehaviour
                 mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, initialCameraPosition, Time.deltaTime * transitionSpeed);
                 mainCamera.transform.rotation = Quaternion.Lerp(mainCamera.transform.rotation, initialCameraRotation, Time.deltaTime * transitionSpeed);
 
-                if (Vector3.Distance(mainCamera.transform.position, initialCameraPosition) < 4f)
+                if (Vector3.Distance(mainCamera.transform.position, initialCameraPosition) < 0.1f)
                 {
                     Debug.Log("Vista general alcanzada.");
                     isTransitioning = false;
@@ -91,14 +94,35 @@ public class ClickHandler : MonoBehaviour
         }
     }
 
-    void ShowPlanetInfo(PlanetInfo planetInfo)
+    public void HandleOrbitClick(Transform planetTransform)
     {
-        // Actualizar el texto con la información del planeta
-        Debug.Log("Mostrando información de " + planetInfo.planetName);
-        planetInfoText.text = planetInfo.planetName + ": " + planetInfo.planetDescription;
-        planetInfoText.gameObject.SetActive(true);
+        if (targetPlanet == planetTransform)
+        {
+            // Si el planeta ya está seleccionado, volver a la vista general
+            Debug.Log("Volviendo a la vista general");
+            isTransitioning = true;
+            targetPlanet = null;
+            planetInfoText.gameObject.SetActive(false);
+            planetMenu.HideMenu();
+        }
+        else
+        {
+            // Seleccionar un nuevo planeta
+            Debug.Log("Planeta clickeado: " + planetTransform.name);
+            targetPlanet = planetTransform;
+            isTransitioning = true;
+            planetInfoText.gameObject.SetActive(false);
+            planetMenu.HideMenu();
+        }
     }
+
+
+
 }
+
+
+
+
 
 
 
